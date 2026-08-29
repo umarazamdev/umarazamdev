@@ -19,6 +19,11 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
+          # A classic PAT with read:user scope lets the snake include PRIVATE
+          # contributions too. Store it as a repo secret named GH_PAT and turn on
+          # Settings > Profile > "Include private contributions on my profile".
+          # Leave empty to use only public contributions (default action token).
+          github_token: ${{ secrets.GH_PAT }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
