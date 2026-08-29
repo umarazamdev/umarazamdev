@@ -1,29 +1,17 @@
 <div align="center">
-
-<!-- PORTRAIT ART -->
 <img src="assets/portrait.svg" width="260" alt="Umar Azam Dot Matrix Portrait"><br>
-<a href="https://github.com/umar-azam">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=900&color=39D353&center=true&vCenter=true&width=620&height=32&lines=Umar+Azam;Mobile+App+%26+Web+Developer;React+Native+%26+React.js+Engineer;Full-Stack+Developer+(MERN);BSCS+%40+University+of+the+Punjab" alt="Umar Azam Header">
-</a>
-
-<p align="center">
-  <b>Mobile App & Web Developer</b> &nbsp;•&nbsp; <b>BSCS @ University of the Punjab</b>
-</p>
-
-<!-- COMPACT ACTION BUTTONS -->
+<a href="https://github.com/umar-azam"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=900&color=39D353&center=true&vCenter=true&width=620&height=32&lines=Umar+Azam;Mobile+App+%26+Web+Developer;React+Native+%26+React.js+Engineer;Full-Stack+Developer+(MERN);BSCS+%40+University+of+the+Punjab" alt="Umar Azam Header"></a>
+<br>
+<b>Mobile App & Web Developer</b> &nbsp;•&nbsp; <b>BSCS @ University of the Punjab</b>
+<br>
 <a href="https://umarazam.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"></a>
 <a href="https://linkedin.com/in/umarazamdev"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 <a href="https://facebook.com/umarazamdev"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook"></a>
 <a href="mailto:umaarazaam@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
 <a href="https://github.com/umar-azam"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-
-<br><br>
-
-<img src="https://komarev.com/ghpvc/?username=umarazamdev&style=flat-square&color=39d353&label=Profile+Views" alt="Profile Views">
-
-</div>
-
 <br>
+<img src="https://komarev.com/ghpvc/?username=umarazamdev&style=flat-square&color=39d353&label=Profile+Views" alt="Profile Views">
+</div>
 
 ---
 
