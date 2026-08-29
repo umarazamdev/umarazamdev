@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Umar Azam — Profile Preview</title>
+<style>
+  :root { color-scheme: dark }
+  body { background:#0d1117; color:#c9d1d9; font:15px/1.5 ui-sans-serif,Segoe UI,system-ui,sans-serif;
+         margin:0; padding:40px; }
+  h1 { font-size:24px; color:#39d353; letter-spacing:.02em; margin-bottom: 8px; }
+  p.subtitle { color:#8b949e; margin-top:0; font-size:14px; }
+  h2 { font-size:14px; text-transform:uppercase; letter-spacing:.12em; color:#8b949e;
+       border-bottom:1px solid #21262d; padding-bottom:8px; margin:40px 0 18px }
+  .row { display:flex; gap:28px; flex-wrap:wrap; align-items:flex-start }
+  .card { background:#0d1117; border:1px solid #21262d; border-radius:10px; padding:20px }
+  .card.light { background:#ffffff }
+  .tag { font:11px ui-monospace,Consolas,monospace; color:#8b949e; display:block; margin-bottom:12px }
+  img { display:block; max-width:100% }
+  button { background:#21262d; color:#c9d1d9; border:1px solid #30363d; border-radius:6px;
+           padding:6px 14px; font:inherit; font-size:12px; cursor:pointer; margin-left:14px;
+           vertical-align:middle; text-transform:none; letter-spacing:0 }
+  button:hover { background:#30363d; border-color:#39d353; color:#39d353 }
+</style>
+</head>
+<body>
+
+<h1>Umar Azam — Profile README Local Preview</h1>
+<p class="subtitle">Preview your generated dot-matrix portrait asset on dark and light themes.</p>
+
+<h2>portrait <button id="replay">Re-generate / Refresh Preview</button></h2>
+<div class="row">
+  <div class="card">
+    <span class="tag">portrait.svg (Dark Theme)</span>
+    <img class="portrait" src="assets/portrait.svg" width="280" alt="Portrait Dark">
+  </div>
+  <div class="card light">
+    <span class="tag" style="color:#57606a">portrait.svg (Light Theme)</span>
+    <img class="portrait" src="assets/portrait.svg" width="280" alt="Portrait Light">
+  </div>
+</div>
+
+<script>
+  document.getElementById('replay').onclick = () => {
+    document.querySelectorAll('img.portrait').forEach(img => {
+      img.src = 'assets/portrait.svg?' + Date.now();
+    });
+  };
+</script>
+
+</body>
+</html>

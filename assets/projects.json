@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "repo": "SmartMart",
+      "description": "Full-stack mobile marketplace app (React Native, Node.js, Express, MongoDB) with RBAC, multi-method auth, cart, checkout, order tracking, and automated CI/CD for Android APK builds."
+    },
+    {
+      "repo": "APS-School-Website",
+      "description": "Responsive 8-page educational institution web platform with role-based admin dashboard, interactive news ticker, and authentication system."
+    },
+    {
+      "repo": "FoodOnRoute",
+      "description": "GPS-based food delivery mobile concept app with real-time restaurant discovery, custom location drops, order tracking, and fluid Framer Motion animations."
+    },
+    {
+      "repo": "Pharmacy-POS",
+      "description": "Point-of-sale & inventory management application tailored for pharmacy operations, sales logging, and real-time stock control."
+    }
+  ]
+}
