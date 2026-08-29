@@ -149,6 +149,18 @@ Open to meaningful conversations, collaborations, and web/mobile software engine
 | 📧 **Email** | [umaarazaam@gmail.com](mailto:umaarazaam@gmail.com) |
 | 🐙 **GitHub** | [github.com/umar-azam](https://github.com/umar-azam) |
 
+---
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/umarazamdev/umarazamdev/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/umarazamdev/umarazamdev/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution snake" src="https://raw.githubusercontent.com/umarazamdev/umarazamdev/output/github-contribution-grid-snake.svg">
+</picture>
+
+</div>
+
 <br>
 
 <div align="center">
