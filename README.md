@@ -1,13 +1,9 @@
 <div align="center">
 
 <!-- PORTRAIT ART -->
-<img src="assets/portrait.svg" width="260" alt="Umar Azam Dot Matrix Portrait">
-
-<br><br>
-
-<!-- NAME & ANIMATED TYPING HEADER -->
+<img src="assets/portrait.svg" width="260" alt="Umar Azam Dot Matrix Portrait"><br>
 <a href="https://github.com/umar-azam">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=2500&pause=900&color=39D353&center=true&vCenter=true&width=620&lines=Umar+Azam;Mobile+App+%26+Web+Developer;React+Native+%26+React.js+Engineer;Full-Stack+Developer+(MERN);BSCS+%40+University+of+the+Punjab" alt="Umar Azam Header">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=900&color=39D353&center=true&vCenter=true&width=620&height=32&lines=Umar+Azam;Mobile+App+%26+Web+Developer;React+Native+%26+React.js+Engineer;Full-Stack+Developer+(MERN);BSCS+%40+University+of+the+Punjab" alt="Umar Azam Header">
 </a>
 
 <p align="center">
