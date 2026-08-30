@@ -137,10 +137,18 @@ LOGO_COL, LOGO_ROW = 39, 0
 # animation timing (seconds)
 # --------------------------------------------------------------------------- #
 
-STEP = 0.018        # how long the snake spends on one cell
+TRAVEL = 7.8        # how long the snake takes to cross the whole grid
 HOLD = 3.2          # whole word stays lit this long after the snake finishes
 FADE = 1.0          # everything fades out over this long
-SNAKE_LEN = 4       # head + 3 body segments
+
+# The body is drawn as a dashed stroke riding the serpentine path: one dash,
+# a gap longer than the path, and an animated stroke-dashoffset. Stacking a
+# few of these at decreasing width and increasing length tapers the body from
+# a thick neck down to a thin tail, which is what actually reads as a snake.
+# (width, length in px) - drawn back to front, so the thick one lands on top.
+BODY_LAYERS = [(4, 142), (6, 112), (8, 82), (10, 52), (11.5, 26)]
+SNAKE_LEN = max(length for _, length in BODY_LAYERS)
+HEAD_R = 6.5
 
 
 def art_cells() -> set[tuple[int, int]]:
@@ -177,6 +185,37 @@ def px(col: int, row: int) -> tuple[int, int]:
     return PAD + col * PITCH, PAD + row * PITCH
 
 
+def centre(col: int, row: int) -> tuple[float, float]:
+    x, y = px(col, row)
+    return x + CELL / 2, y + CELL / 2
+
+
+def path_d() -> str:
+    """The serpentine as one continuous <path>, through cell centres."""
+    parts = []
+    for row in range(ROWS):
+        left, right = centre(0, row)[0], centre(COLS - 1, row)[0]
+        y = centre(0, row)[1]
+        if row == 0:
+            parts.append(f"M{fmt(left)},{fmt(y)}")
+            parts.append(f"H{fmt(right)}")
+        else:
+            parts.append(f"V{fmt(y)}")
+            parts.append(f"H{fmt(left if row % 2 else right)}")
+    return "".join(parts)
+
+
+def dist_along(step: int) -> float:
+    """Distance along the path to the centre of the step-th cell."""
+    row, k = divmod(step, COLS)
+    return row * ((COLS - 1) * PITCH + PITCH) + k * PITCH
+
+
+PATH_LEN = (ROWS - 1) * PITCH + ROWS * (COLS - 1) * PITCH
+# The head has to run past the end far enough for the longest tail to clear.
+HEAD_RUN = PATH_LEN + SNAKE_LEN
+
+
 def fmt(v: float) -> str:
     """Trim float noise out of the attribute soup."""
     return f"{v:.5f}".rstrip("0").rstrip(".") or "0"
@@ -188,9 +227,13 @@ def build(theme: str) -> str:
     art = art_cells()
     path = serpentine()
 
-    travel = len(path) * STEP
-    total = travel + HOLD + FADE
-    f_hold_end = (travel + HOLD) / total
+    total = TRAVEL + HOLD + FADE
+    f_travel = TRAVEL / total
+    f_hold_end = (TRAVEL + HOLD) / total
+
+    def reach(step: int) -> float:
+        """Global time fraction at which the head arrives at this cell."""
+        return dist_along(step) / HEAD_RUN * f_travel
 
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" '
@@ -216,9 +259,8 @@ def build(theme: str) -> str:
         if (col, row) not in art:
             continue
         x, y = px(col, row)
-        t_on = step * STEP
-        f1 = t_on / total
-        f2 = min((t_on + 0.06) / total, f_hold_end)
+        f1 = reach(step)
+        f2 = min(f1 + 0.005, f_hold_end)
         out.append(
             f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" '
             f'rx="{RADIUS}" fill="{lit}" opacity="0">'
@@ -230,39 +272,57 @@ def build(theme: str) -> str:
     out.append("</g>")
 
     # --- the snake --------------------------------------------------------- #
-    # Each segment walks the same path, just a few steps behind the head.
-    # Linear interpolation between adjacent cells is what makes it glide
-    # instead of teleporting from square to square.
-    f_travel = travel / total
-    key_times = ";".join(
-        fmt(i / (len(path) - 1) * f_travel) for i in range(len(path))
+    # One dash riding the serpentine path. The gap is longer than the path so
+    # only a single dash is ever on screen, and animating stroke-dashoffset
+    # slides it from the start to past the end. Round caps give the body its
+    # rounded nose and tail; stacking the layers tapers it.
+    d = path_d()
+    gap = HEAD_RUN + 100
+    # snake vanishes the moment it leaves the grid, so the held word is clean
+    f_gone = min(f_travel + 0.015, 1.0)
+    fade_keys = f"0;0.008;{fmt(f_travel)};{fmt(f_gone)};1"
+
+    # One opacity animation on the wrapper, and every layer fully opaque:
+    # per-layer alpha would show a visible step wherever two widths meet.
+    out.append(
+        f'<g fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0">'
+        f'<animate attributeName="opacity" values="0;1;1;0;0" '
+        f'keyTimes="{fade_keys}" dur="{fmt(total)}s" repeatCount="indefinite"/>'
     )
-    key_times += ";1"
-
-    out.append("<g>")
-    for seg in range(SNAKE_LEN):
-        lag = seg
-        pts = [path[0]] * lag + path[: len(path) - lag]
-        xs = ";".join(str(px(c, r)[0]) for c, r in pts) + f";{px(*pts[-1])[0]}"
-        ys = ";".join(str(px(c, r)[1]) for c, r in pts) + f";{px(*pts[-1])[1]}"
-
-        colour = head_col if seg == 0 else body_col
-        # tail segments shrink and dim a little
-        opacity = 1.0 if seg == 0 else 0.85 - 0.18 * (seg - 1)
-
+    for width, length in BODY_LAYERS:
+        # Every layer's leading edge sits on the head, so they nest into a taper.
+        start, end = length, length - HEAD_RUN
         out.append(
-            f'<rect width="{CELL}" height="{CELL}" rx="{RADIUS}" '
-            f'fill="{colour}" opacity="0">'
-            f'<animate attributeName="x" values="{xs}" keyTimes="{key_times}" '
+            f'<path d="{d}" stroke="{body_col}" stroke-width="{fmt(width)}" '
+            f'stroke-dasharray="{fmt(length)} {fmt(gap)}" '
+            f'stroke-dashoffset="{fmt(start)}">'
+            f'<animate attributeName="stroke-dashoffset" '
+            f'values="{fmt(start)};{fmt(end)};{fmt(end)}" '
+            f'keyTimes="0;{fmt(f_travel)};1" '
             f'dur="{fmt(total)}s" repeatCount="indefinite"/>'
-            f'<animate attributeName="y" values="{ys}" keyTimes="{key_times}" '
-            f'dur="{fmt(total)}s" repeatCount="indefinite"/>'
-            f'<animate attributeName="opacity" '
-            f'values="0;{fmt(opacity)};{fmt(opacity)};0;0" '
-            f'keyTimes="0;0.01;{fmt(f_travel)};{fmt(min(f_travel + 0.02, 1.0))};1" '
-            f'dur="{fmt(total)}s" repeatCount="indefinite"/>'
-            f"</rect>"
+            f"</path>"
         )
+
+    # Head: rides the same cell centres the dash head passes through, so it
+    # stays glued to the front of the body.
+    xs, ys, keys = [], [], []
+    for step in range(len(path)):
+        cx, cy = centre(*path[step])
+        xs.append(fmt(cx))
+        ys.append(fmt(cy))
+        keys.append(fmt(reach(step)))
+    xs.append(xs[-1])
+    ys.append(ys[-1])
+    keys.append("1")
+
+    out.append(
+        f'<circle r="{HEAD_R}" fill="{head_col}">'
+        f'<animate attributeName="cx" values="{";".join(xs)}" '
+        f'keyTimes="{";".join(keys)}" dur="{fmt(total)}s" repeatCount="indefinite"/>'
+        f'<animate attributeName="cy" values="{";".join(ys)}" '
+        f'keyTimes="{";".join(keys)}" dur="{fmt(total)}s" repeatCount="indefinite"/>'
+        f"</circle>"
+    )
     out.append("</g>")
 
     out.append("</svg>")
