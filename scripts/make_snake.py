@@ -31,7 +31,7 @@ from pathlib import Path
 # grid geometry  (matches GitHub's own contribution graph metrics)
 # --------------------------------------------------------------------------- #
 
-COLS, ROWS = 48, 9
+COLS, ROWS = 51, 9
 CELL, PITCH, PAD = 11, 14, 5
 RADIUS = 2
 
@@ -119,17 +119,21 @@ GLYPH_W, GLYPH_H = 5, 7
 LETTER_GAP = 1
 TEXT_COL, TEXT_ROW = 1, 1
 
-# 9x9 badge on the right, symmetric on both axes
+# Copilot mark on the right: a solid rounded head with two big eyes cut out
+# of it. The eyes are the whole identity of that logo, so they get 2 columns
+# each with a 3-column bridge between them - 1-wide eyes read as slots, and a
+# 1-wide bridge reads as a stray pixel floating in a hole. Drawing the head as
+# an outline instead (what this used to be) just reads as a ring, not a face.
 LOGO = [
-    "..#####..",
-    ".#######.",
-    "##.....##",
-    "#.......#",
-    "#.##.##.#",
-    "#.......#",
-    "##.....##",
-    ".#######.",
-    "..#####..",
+    "..#######..",
+    ".#########.",
+    "###########",
+    "##..###..##",
+    "##..###..##",
+    "##..###..##",
+    "###########",
+    ".#########.",
+    "..#######..",
 ]
 LOGO_COL, LOGO_ROW = 39, 0
 
