@@ -25,24 +25,24 @@
 <body>
 
 <h1>Umar Azam — Profile README Local Preview</h1>
-<p class="subtitle">Preview your generated dot-matrix portrait asset on dark and light themes.</p>
+<p class="subtitle">Preview your transparent portrait photo asset on dark and light themes.</p>
 
 <h2>portrait <button id="replay">Re-generate / Refresh Preview</button></h2>
 <div class="row">
   <div class="card">
-    <span class="tag">portrait.svg (Dark Theme)</span>
-    <img class="portrait" src="assets/portrait.svg" width="280" alt="Portrait Dark">
+    <span class="tag">umar-azam-portrait.png (Dark Theme)</span>
+    <img class="portrait" src="assets/umar-azam-portrait.png" width="220" alt="Portrait Dark">
   </div>
   <div class="card light">
-    <span class="tag" style="color:#57606a">portrait.svg (Light Theme)</span>
-    <img class="portrait" src="assets/portrait.svg" width="280" alt="Portrait Light">
+    <span class="tag" style="color:#57606a">umar-azam-portrait.png (Light Theme)</span>
+    <img class="portrait" src="assets/umar-azam-portrait.png" width="220" alt="Portrait Light">
   </div>
 </div>
 
 <script>
   document.getElementById('replay').onclick = () => {
     document.querySelectorAll('img.portrait').forEach(img => {
-      img.src = 'assets/portrait.svg?' + Date.now();
+      img.src = 'assets/umar-azam-portrait.png?' + Date.now();
     });
   };
 </script>
