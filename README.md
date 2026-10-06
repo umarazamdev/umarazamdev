@@ -24,8 +24,9 @@
 | :--- | :--- |
 | 🏢 **CO-FOUNDER** | **[Hantalyze](https://hantalyze.com/)** |
 | 🎯 **ROLE** | **Product Lead** |
-| 🚀 **BUILDING** | **Software Products & Digital Solutions** |
-| ⚡ **FOCUS** | **Mobile App, Full-Stack & Product Development** |
+| 🚀 **BUILDING** | **Pharmacy POS & SaaS Platform (Production Phase) • Dukanlo (POS)** |
+| 📦 **SHIPPED** | **HNH Humanity Platform • SmartMart • APS School & College Kharian** |
+| ⚡ **FOCUS** | **Mobile App, Full-Stack & Product Architecture** |
 | 🛠️ **TECH** | **React Native, React, Next.js, TypeScript, Node.js, MongoDB** |
 | 📍 **BASED IN** | **Gujranwala, Pakistan** |
 
@@ -41,7 +42,7 @@ At Hantalyze, I bridge product vision and technical engineering — leading prod
 
 My engineering core revolves around cross-platform mobile app development with **React Native** alongside full-stack web platforms using **React**, **Next.js**, **TypeScript**, **Node.js**, **Express**, **MongoDB**, and **Tailwind CSS**. I completed my formal Mobile App Development Internship at **Technic Mentors** in September 2026.
 
-I integrate modern **AI-assisted engineering workflows** — utilizing CLI tools, AI agents, and model context workflows (such as **Claude Code**, **Codex CLI**, **Gemini CLI**, **OpenCode**, and **Cursor**) for accelerated software research, architecture planning, code reviews, and rapid debugging.
+I build AI-natively — integrating advanced CLI coding agents, AI development environments, and LLM orchestration workflows (**Claude Code**, **Codex CLI**, **Gemini CLI**, **OpenCode**, **Cursor**, **Windsurf**, and **MCP**) for accelerated software research, architecture planning, automated testing, and rapid debugging.
 
 ---
 
@@ -68,9 +69,16 @@ As **Product Lead**, I drive product ideas from initial concept to deployment th
 <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js"> <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white" alt="Express.js"> <img src="https://img.shields.io/badge/REST_APIs-0055DA?style=flat-square&logo=postman&logoColor=white" alt="REST APIs"> <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB"> <img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white" alt="Mongoose"> <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase"> <img src="https://img.shields.io/badge/JWT_Auth-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT"> <img src="https://img.shields.io/badge/RBAC-333333?style=flat-square&logo=auth0&logoColor=white" alt="RBAC"> <img src="https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white" alt="Zod">
 
 ### 04 — AI-Assisted Engineering
-<img src="https://img.shields.io/badge/Claude_Code_CLI-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude Code CLI"> <img src="https://img.shields.io/badge/Codex_CLI-412991?style=flat-square&logoColor=white" alt="Codex CLI"> <img src="https://img.shields.io/badge/Gemini_CLI-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" alt="Gemini CLI"> <img src="https://img.shields.io/badge/OpenCode_CLI-111111?style=flat-square&logoColor=white" alt="OpenCode CLI"> <img src="https://img.shields.io/badge/Cursor-000000?style=flat-square&logo=cursor&logoColor=white" alt="Cursor"> <img src="https://img.shields.io/badge/MCP-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Model Context Protocol"> <img src="https://img.shields.io/badge/Prompt_Engineering-111111?style=flat-square&logoColor=white" alt="Prompt Engineering">
 
-*Leveraging AI CLI agents and model ecosystems (Claude, GPT, Gemini, DeepSeek, Qwen) for AI-native engineering workflows, rapid research, debugging, and code review.*
+**AI Coding Tools, CLI Agents & Platforms**
+<br>
+<img src="https://img.shields.io/badge/Claude_Code_CLI-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude Code CLI"> <img src="https://img.shields.io/badge/Codex_CLI-412991?style=flat-square&logoColor=white" alt="Codex CLI"> <img src="https://img.shields.io/badge/Gemini_CLI-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" alt="Gemini CLI"> <img src="https://img.shields.io/badge/OpenCode_CLI-111111?style=flat-square&logoColor=white" alt="OpenCode CLI"> <img src="https://img.shields.io/badge/Cursor-000000?style=flat-square&logo=cursor&logoColor=white" alt="Cursor"> <img src="https://img.shields.io/badge/Windsurf-0F172A?style=flat-square&logoColor=white" alt="Windsurf"> <img src="https://img.shields.io/badge/Replit-F26207?style=flat-square&logo=replit&logoColor=white" alt="Replit"> <img src="https://img.shields.io/badge/Lovable-FF3366?style=flat-square&logoColor=white" alt="Lovable"> <img src="https://img.shields.io/badge/v0-000000?style=flat-square&logo=vercel&logoColor=white" alt="v0"> <img src="https://img.shields.io/badge/Bolt.new-1E293B?style=flat-square&logoColor=white" alt="Bolt.new"> <img src="https://img.shields.io/badge/Model_Context_Protocol-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Model Context Protocol"> <img src="https://img.shields.io/badge/Prompt_Engineering-111111?style=flat-square&logoColor=white" alt="Prompt Engineering">
+
+**Model Ecosystems & Reasoning Engines Explored**
+<br>
+<img src="https://img.shields.io/badge/Anthropic_Claude-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Anthropic Claude"> <img src="https://img.shields.io/badge/OpenAI_GPT-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI GPT"> <img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" alt="Google Gemini"> <img src="https://img.shields.io/badge/DeepSeek-4D6BFE?style=flat-square&logo=deepseek&logoColor=white" alt="DeepSeek"> <img src="https://img.shields.io/badge/Mistral_AI-FA520F?style=flat-square&logo=mistralai&logoColor=white" alt="Mistral AI"> <img src="https://img.shields.io/badge/Qwen-6D3AE6?style=flat-square&logo=qwen&logoColor=white" alt="Qwen"> <img src="https://img.shields.io/badge/GLM_(Z.ai)-3B82F6?style=flat-square&logoColor=white" alt="GLM (Z.ai)"> <img src="https://img.shields.io/badge/Kimi_(Moonshot_AI)-000000?style=flat-square&logoColor=white" alt="Kimi (Moonshot AI)"> <img src="https://img.shields.io/badge/Grok_(xAI)-000000?style=flat-square&logoColor=white" alt="Grok (xAI)">
+
+*Leveraging AI CLI agents, modern app builders, and frontier reasoning models for AI-native engineering workflows, full-stack prototyping, rapid research, debugging, and code review.*
 
 ### 05 — Testing, DevOps & Tools
 <img src="https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white" alt="Jest"> <img src="https://img.shields.io/badge/Supertest-000000?style=flat-square&logo=jest&logoColor=white" alt="Supertest"> <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions"> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"> <img src="https://img.shields.io/badge/Docker_Compose-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker Compose"> <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel"> <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"> <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white" alt="Cloudinary"> <img src="https://img.shields.io/badge/Brevo-0B996E?style=flat-square&logo=brevo&logoColor=white" alt="Brevo"> <img src="https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code">
@@ -78,6 +86,32 @@ As **Product Lead**, I drive product ideas from initial concept to deployment th
 ---
 
 ## Featured Projects
+
+### 💊 Pharmacy POS & SaaS Platform *(PRODUCTION PHASE)*
+> **Commercial Multi-Tenant Pharmacy Point-of-Sale, Inventory & Operations Platform**
+
+Built with **React Native 0.87** (New Architecture, React 19, TypeScript), **Node.js**, **Express.js**, **MongoDB Atlas**, **Docker**, and **Render**.
+
+- **Multi-Tenant SaaS Architecture**: Complete workspace isolation enforcing `organizationId` scoping, tenant context verification on every request (`X-Organization-Id` & JWT `orgId`), and 5 granular RBAC roles (`owner`, `admin`, `manager`, `pharmacist`, `cashier`).
+- **Subscription & Quota Engine**: Tiered plan management (Free, Starter, Professional, Business/Enterprise) with server-side feature flagging and resource quota enforcement via `entitlement.service.ts`.
+- **Atomic FEFO Inventory Engine**: Single atomic `findOneAndUpdate` pipeline preventing race-condition lost updates, append-only `InventoryTransaction` ledger, FEFO batch allocation, and low-stock/expiry tracking.
+- **Enterprise Security & Reliability**: Refresh-token rotation with family-level reuse detection, TOTP 2FA (`otplib`), hardware Keychain token storage, biometric app-lock, Android `FLAG_SECURE`, idempotency keys (`Idempotency-Key` middleware), cumulative-return guards, and Cloudinary + Firebase FCM push notifications.
+- **Quality & Automated Testing**: 80+ integration and smoke test checks (`supertest` + `mongodb-memory-server`) validating multi-tenancy, RBAC, 2FA, idempotency, and financial integrity.
+
+<br>
+
+### 🩸 Humanity in Natural Hands (HNH Humanity Platform)
+> **Full-Stack Humanitarian Welfare & Emergency Blood Dispatch Platform**
+
+Built with **Next.js 16**, **React**, **TypeScript**, **Express.js**, **MongoDB Atlas**, **Tailwind CSS**, and **Cloudinary**.
+
+- **Emergency Blood Wing & Dispatch System**: Nationwide donor registry across Pakistan (province, district, tehsil, city), SOS emergency request engine with patient urgency scoring, and automated formatted WhatsApp broadcast dispatch for volunteer coordinator networks.
+- **Dynamic CMS & Alert Provider**: Versioned JSON content engine in MongoDB (`ContentProvider`), instant client hydration, and live emergency red alert banner management across all site pages.
+- **Campaigns, Donors & Media Pipeline**: Humanitarian campaign funding tracker, volunteer onboarding workflows, and secure media ingestion pipeline (Multer + Cloudinary CDN stream).
+
+🔗 **[Visit Live Platform](https://humanityinnaturalhands.vercel.app/)**
+
+<br>
 
 ### 📱 Dukanlo — POS App for Shopkeepers *(IN DEVELOPMENT)*
 > **Modern Point-of-Sale Solution for Pakistani Retailers**
@@ -114,17 +148,7 @@ Built with **React**, **TypeScript**, **Vite**, **Tailwind CSS**, and **shadcn/u
 - **Role-Based Admin Dashboard:** Integrated authentication system with custom admin portal for content management.
 - **Interactive UI Components:** Custom Hero image sliders, animated statistic counters, and real-time news ticker.
 
-🔗 **[Visit Live Website](https://gakwebsite.netlify.app/)**
-
-<br>
-
-### 💊 Pharmacy POS & SaaS Platform
-> **Multi-Tenant Pharmacy Inventory & Sales Management**
-
-Built with **React Native**, **Node.js**, **Express.js**, and **MongoDB**.
-
-- **Multi-Tenant Architecture:** Built role-based access permissions, tenant isolation, and SaaS subscription tier logic.
-- **Operations & Management:** Stock level tracking, purchase order management, supplier registries, customer invoicing, and revenue records.
+🔗 **[Visit Live Website](https://apsaccsgak.vercel.app/)**
 
 ---
 
